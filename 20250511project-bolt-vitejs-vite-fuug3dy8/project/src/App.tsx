@@ -1,0 +1,44 @@
+import { Routes, Route } from 'react-router-dom'
+import Navigation from './components/Navigation'
+import Home from './pages/Home'
+import ProductsPage from './pages/solutions/products'
+import SolutionsPage from './pages/solutions/solutions'
+import MSITPage from './pages/business/msit'
+import BCDRPage from './pages/business/bcdr'
+import HelpdeskPage from './pages/business/helpdesk'
+import CubicInnov8AIPage from './pages/business/cubicinnov8-ai'
+import PenetrationPage from './pages/business/penetration'
+import BlogPage from './pages/knowledge/blog'
+import GoalkeeperPage from './pages/knowledge/cybersecurity-goalkeeper'
+import TrainingPage from './pages/business/training'
+import NewsPage from './pages/company/news'
+import CareersPage from './pages/company/careers'
+import AboutPage from './pages/company/about'
+import PartnersPage from './pages/company/partners'
+
+function App() {
+  return (
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/solutions/products" element={<ProductsPage />} />
+        <Route path="/solutions/solutions" element={<SolutionsPage />} />
+        <Route path="/business/msit" element={<MSITPage />} />
+        <Route path="/business/bcdr" element={<BCDRPage />} />
+        <Route path="/business/helpdesk" element={<HelpdeskPage />} />
+        <Route path="/business/cloud" element={<CubicInnov8AIPage />} />
+        <Route path="/business/penetration" element={<PenetrationPage />} />
+        <Route path="/business/training" element={<TrainingPage />} />
+        <Route path="/knowledge/blog" element={<BlogPage />} />
+        <Route path="/knowledge/cybersecurity-goalkeeper" element={<GoalkeeperPage />} />
+        <Route path="/company/news" element={<NewsPage />} />
+        <Route path="/company/careers" element={<CareersPage />} />
+        <Route path="/company/about" element={<AboutPage />} />
+        <Route path="/company/partners" element={<PartnersPage />} />
+      </Routes>
+    </>
+  )
+}
+
+export default App
