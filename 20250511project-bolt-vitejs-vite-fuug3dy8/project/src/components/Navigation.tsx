@@ -1,6 +1,7 @@
-# Full Navigation.tsx source code with all fixes applied, ready for direct copy-paste
-full_code = """
-
+# Fixing and preparing the final clean Navigation.tsx file for copy-paste use
+fixed_code = """
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
@@ -73,83 +74,72 @@ export default function Navigation() {
             <Link to="/contact" className="text-[#3CEFFF] hover:text-[#89FF94]">お問い合わせ</Link>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden max-h-[90vh] overflow-y-auto"
-        >
-          <div className="py-4 space-y-4">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ホーム</Link>
-
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">事業内容</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/business/msit" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">MSIT</Link>
-                <Link to="/business/penetration" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">脆弱性診断</Link>
-                <Link to="/business/bcdr" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">BCDR</Link>
-                <Link to="/business/helpdesk" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ITヘルプデスク</Link>
-                <Link to="/business/cloud" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">クラウド導入</Link>
-                <Link to="/business/training" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ヒューマンエラー対策</Link>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <button
-                onClick={() => setShowCaseStudies(!showCaseStudies)}
-                className="font-semibold text-[#3CEFFF] w-full text-left"
-              >
-                導入事例 {showCaseStudies ? '▲' : '▼'}
-              </button>
-              {showCaseStudies && (
-                <div className="pl-4 space-y-2">
-                  {caseStudies.map((study, index) => (
-                    <div key={index}>
-                      <h3 className="text-[#3CEFFF] font-medium">{study.title}</h3>
-                      <p className="text-gray-300 text-sm">{study.description}</p>
-                      <span className="text-[#FF6B6B] text-sm">Coming soon</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">企業情報</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/company/about" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">会社概要</Link>
-                <Link to="/company/partners" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">パートナー企業</Link>
-                <Link to="/company/careers" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">採用情報</Link>
-                <Link to="/company/news" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ニュース＆トピックス</Link>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">セキュリティゴールキーパー</Link>
-                <Link to="/knowledge/blog" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ブログ</Link>
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
-              <div className="pl-4 space-y-2">
-                <a href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">資料請求</a>
-                <a href="https://meetings.hubspot.com/cubic-innov8/free-consultation" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">無料相談</a>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden overflow-hidden max-h-[90vh] overflow-y-auto"
+      >
+        <div className="py-4 space-y-4 px-4">
+          <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ホーム</Link>
+          <div className="font-semibold text-[#3CEFFF]">事業内容</div>
+          <div className="pl-4 space-y-2">
+            <Link to="/business/msit" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">MSIT</Link>
+            <Link to="/business/penetration" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">脆弱性診断</Link>
+            <Link to="/business/bcdr" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">BCDR</Link>
+            <Link to="/business/helpdesk" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ITヘルプデスク</Link>
+            <Link to="/business/cloud" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">クラウド導入</Link>
+            <Link to="/business/training" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ヒューマンエラー対策</Link>
+          </div>
+
+          <div className="space-y-2">
+            <button
+              onClick={() => setShowCaseStudies(!showCaseStudies)}
+              className="font-semibold text-[#3CEFFF] w-full text-left"
+            >
+              導入事例 {showCaseStudies ? '▲' : '▼'}
+            </button>
+            {showCaseStudies && (
+              <div className="pl-4 space-y-2">
+                {caseStudies.map((study, index) => (
+                  <div key={index}>
+                    <h3 className="text-[#3CEFFF] font-medium">{study.title}</h3>
+                    <p className="text-gray-300 text-sm">{study.description}</p>
+                    <span className="text-[#FF6B6B] text-sm">Coming soon</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="font-semibold text-[#3CEFFF]">企業情報</div>
+          <div className="pl-4 space-y-2">
+            <Link to="/company/about" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">会社概要</Link>
+            <Link to="/company/partners" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">パートナー企業</Link>
+            <Link to="/company/careers" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">採用情報</Link>
+            <Link to="/company/news" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ニュース＆トピックス</Link>
+          </div>
+
+          <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
+          <div className="pl-4 space-y-2">
+            <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">セキュリティゴールキーパー</Link>
+            <Link to="/knowledge/blog" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ブログ</Link>
+          </div>
+
+          <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
+          <div className="pl-4 space-y-2">
+            <a href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">資料請求</a>
+            <a href="https://meetings.hubspot.com/cubic-innov8/free-consultation" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">無料相談</a>
+          </div>
+        </div>
+      </motion.div>
     </nav>
   )
 }
 """
 
-# Save to file
-output_file = Path("/mnt/data/Navigation.tsx")
-output_file.write_text(full_code.strip(), encoding="utf-8")
-
-output_file
+fixed_file_path = Path("/mnt/data/Navigation_fixed.tsx")
+fixed_file_path.write_text(fixed_code.strip(), encoding="utf-8")
+fixed_file_path
