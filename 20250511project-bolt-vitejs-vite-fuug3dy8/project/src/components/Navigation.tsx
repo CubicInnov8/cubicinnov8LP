@@ -1,5 +1,3 @@
-# Fixing and preparing the final clean Navigation.tsx file for copy-paste use
-fixed_code = """
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -133,12 +131,8 @@ export default function Navigation() {
             <a href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">資料請求</a>
             <a href="https://meetings.hubspot.com/cubic-innov8/free-consultation" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">無料相談</a>
           </div>
+        </div>
       </motion.div>
     </nav>
   )
 }
-"""
-
-fixed_file_path = Path("/mnt/data/Navigation_fixed.tsx")
-fixed_file_path.write_text(fixed_code.strip(), encoding="utf-8")
-fixed_file_path
