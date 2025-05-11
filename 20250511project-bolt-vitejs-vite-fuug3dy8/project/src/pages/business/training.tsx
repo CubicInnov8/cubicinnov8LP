@@ -22,11 +22,11 @@ export default function TrainingPage() {
         </motion.div>
       </section>
 
-    <div className="mb-8">
+<div className="mb-8">
   <img
     src="/Proton-featured-image - Copy.jpg"
     alt="ハッカーはあなたのデータとお金を狙っています"
-    className="w-full max-h-[400px] object-cover rounded-lg shadow-lg"
+    className="w-3/4 md:w-1/2 mx-auto rounded-lg shadow-lg"
   />
 </div>
 
