@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ScrollToTop from './components/ScrollToTop'
 import Navigation from './components/Navigation'
+import ScrollToTop from './components/ScrollToTop'
+
 import Home from './pages/Home'
 import ProductsPage from './pages/solutions/products'
 import SolutionsPage from './pages/solutions/solutions'
@@ -44,3 +45,4 @@ function App() {
 }
 
 export default App
+
