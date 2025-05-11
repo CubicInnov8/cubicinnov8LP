@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Navigation from './components/Navigation'
 
 import Home from './pages/Home'
+
 import ProductsPage from './pages/solutions/products'
 import SolutionsPage from './pages/solutions/solutions'
 import MSITPage from './pages/business/msit'
@@ -22,8 +23,9 @@ import PartnersPage from './pages/company/partners'
 
 function App() {
   return (
-    <Router basename="/">
-      <ErrorBoundary>
+    // ← ErrorBoundary を全体の一番外に
+    <ErrorBoundary>
+      <Router basename="/">
         <ScrollToTop />
         <Navigation />
         <Routes>
@@ -42,9 +44,9 @@ function App() {
           <Route path="/company/careers" element={<CareersPage />} />
           <Route path="/company/about" element={<AboutPage />} />
           <Route path="/company/partners" element={<PartnersPage />} />
-        </Routes>
-      </ErrorBoundary>
-    </Router>
+       </Routes>
+      </Router>
+    </ErrorBoundary>
   )
 }
 
