@@ -133,7 +133,6 @@ export default function Navigation() {
             <a href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">資料請求</a>
             <a href="https://meetings.hubspot.com/cubic-innov8/free-consultation" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">無料相談</a>
           </div>
-        </div>
       </motion.div>
     </nav>
   )
