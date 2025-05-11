@@ -48,27 +48,66 @@ export default function Navigation() {
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
+            <Link to="/" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">
+              ホーム
+            </Link>
 
             <div className="relative group">
-              <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">事業内容</span>
+              <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">
+                事業内容
+              </span>
               <div className="absolute left-0 mt-2 w-96 bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
-                <Link to="/business/msit" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">MSIT（マネージドセキュリティ＆IT）サービスとSOC運用</Link>
-                <Link to="/business/penetration" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">脆弱性診断・ペネトレーションテスト</Link>
-                <Link to="/business/bcdr" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">BCDR（バックアップ＆災害復旧）</Link>
-                <Link to="/business/helpdesk" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ITヘルプデスク</Link>
-                <Link to="/business/cloud" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">クラウド、DXツール構築、導入</Link>
-                <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ヒューマンエラー対策</Link>
+                <Link to="/business/msit" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  MSIT（マネージドセキュリティ＆IT）サービスとSOC運用
+                </Link>
+                <Link to="/business/penetration" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  脆弱性診断・ペネトレーションテスト
+                </Link>
+                <Link to="/business/bcdr" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  BCDR（バックアップ＆災害復旧）
+                </Link>
+                <Link to="/business/helpdesk" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  ITヘルプデスク
+                </Link>
+                <Link to="/business/cloud" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  クラウド、DXツール構築、導入
+                </Link>
+                <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
+                  ヒューマンエラー対策
+                </Link>
               </div>
             </div>
-<Link to="/solutions/products" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">製品</Link>
-            <Link to="/company/about" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">企業情報</Link>
-            <Link to="/knowledge/blog" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ナレッジ</Link>
-            <Link to="/contact" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">お問い合わせ</Link>
+
+            <Link
+              to="/solutions/products"
+              className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+            >
+              製品
+            </Link>
+
+            <Link
+              to="/company/about"
+              className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+            >
+              企業情報
+            </Link>
+            <Link
+              to="/knowledge/blog"
+              className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+            >
+              ナレッジ
+            </Link>
+            <Link
+              to="/contact"
+              className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+            >
+              お問い合わせ
+            </Link>
           </div>
         </div>
       </div>
 
+      {/* Mobile menu */}
       <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
@@ -76,17 +115,65 @@ export default function Navigation() {
         className="md:hidden overflow-hidden max-h-[90vh] overflow-y-auto"
       >
         <div className="py-4 space-y-4 px-4">
-          <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ホーム</Link>
-          <Link to="/solutions/products" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">製品</Link>
+          <Link
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-[#3CEFFF] hover:text-[#89FF94]"
+          >
+            ホーム
+          </Link>
+          <Link
+            to="/solutions/products"
+            onClick={() => setIsMenuOpen(false)}
+            className="block text-[#3CEFFF] hover:text-[#89FF94]"
+          >
+            製品
+          </Link>
 
           <div className="font-semibold text-[#3CEFFF]">事業内容</div>
           <div className="pl-4 space-y-2">
-            <Link to="/business/msit" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">MSIT</Link>
-            <Link to="/business/penetration" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">脆弱性診断</Link>
-            <Link to="/business/bcdr" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">BCDR</Link>
-            <Link to="/business/helpdesk" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ITヘルプデスク</Link>
-            <Link to="/business/cloud" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">クラウド導入</Link>
-            <Link to="/business/training" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ヒューマンエラー対策</Link>
+            <Link
+              to="/business/msit"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              MSIT
+            </Link>
+            <Link
+              to="/business/penetration"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              脆弱性診断
+            </Link>
+            <Link
+              to="/business/bcdr"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              BCDR
+            </Link>
+            <Link
+              to="/business/helpdesk"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              ITヘルプデスク
+            </Link>
+            <Link
+              to="/business/cloud"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              AI & クラウド導入
+            </Link>
+            <Link
+              to="/business/training"
+              onClick={() => setIsMenuOpen(false)}
+              className="block text-[#3CEFFF] hover:text-[#89FF94]"
+            >
+              ヒューマンエラー対策
+            </Link>
           </div>
 
           <div className="space-y-2">
@@ -109,45 +196,82 @@ export default function Navigation() {
             )}
           </div>
 
-<div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">企業情報</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/company/about" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">会社概要</Link>
-                <Link to="/company/partners" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">パートナー企業</Link>
-                <Link to="/company/careers" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">採用情報</Link>
-                <Link to="/company/news" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ニュース＆トピックス</Link>
-              </div>
+          <div className="space-y-2">
+            <div className="font-semibold text-[#3CEFFF]">企業情報</div>
+            <div className="pl-4 space-y-2">
+              <Link
+                to="/company/about"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                会社概要
+              </Link>
+              <Link
+                to="/company/partners"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                パートナー企業
+              </Link>
+              <Link
+                to="/company/careers"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                採用情報
+              </Link>
+              <Link
+                to="/company/news"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                ニュース＆トピックス
+              </Link>
             </div>
+          </div>
 
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
-              <div className="pl-4 space-y-2">
-                <Link to="/knowledge/cybersecurity-goalkeeper" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">サイバーセキュリティゴールキーパー</Link>
-                <Link to="/knowledge/blog" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ブログ</Link>
-              </div>
+          <div className="space-y-2">
+            <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
+            <div className="pl-4 space-y-2">
+              <Link
+                to="/knowledge/cybersecurity-goalkeeper"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                サイバーセキュリティゴールキーパー
+              </Link>
+              <Link
+                to="/knowledge/blog"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                ブログ
+              </Link>
             </div>
+          </div>
 
-            <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
-              <div className="pl-4 space-y-2">
-                <a
-                  href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
-                >
-                  資料請求
-                </a>
-                <a
-                  href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
-                >
-                  無料相談
-                </a>
-              </div>
+          <div className="space-y-2">
+            <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
+            <div className="pl-4 space-y-2">
+              <a
+                href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                資料請求
+              </a>
+              <a
+                href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-[#3CEFFF] hover:text-[#89FF94]"
+              >
+                無料相談
+              </a>
             </div>
+          </div>
+        </div>
       </motion.div>
     </nav>
   )
