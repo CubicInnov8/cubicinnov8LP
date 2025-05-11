@@ -1,3 +1,5 @@
+# Full Navigation.tsx source code with all fixes applied, ready for direct copy-paste
+full_code = """
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -59,15 +61,17 @@ export default function Navigation() {
               <div className="absolute left-[-200px] mt-2 w-[600px] bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
                 {caseStudies.map((study, index) => (
                   <div key={index} className="px-6 py-3 hover:bg-[#001853]/50">
-                    <div className="flex flex-col">
-                      <h3 className="text-[#3CEFFF] font-medium text-lg">{study.title}</h3>
-                      <p className="text-gray-300 text-sm mt-1">{study.description}</p>
-                      <span className="text-[#FF6B6B] text-sm mt-1">Coming soon</span>
-                    </div>
+                    <h3 className="text-[#3CEFFF] font-medium text-lg">{study.title}</h3>
+                    <p className="text-gray-300 text-sm mt-1">{study.description}</p>
+                    <span className="text-[#FF6B6B] text-sm mt-1">Coming soon</span>
                   </div>
                 ))}
               </div>
             </div>
+
+            <Link to="/company/about" className="text-[#3CEFFF] hover:text-[#89FF94]">企業情報</Link>
+            <Link to="/knowledge/blog" className="text-[#3CEFFF] hover:text-[#89FF94]">ナレッジ</Link>
+            <Link to="/contact" className="text-[#3CEFFF] hover:text-[#89FF94]">お問い合わせ</Link>
           </div>
         </div>
 
@@ -111,8 +115,7 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-          </div>
-        
+
             <div className="space-y-2">
               <div className="font-semibold text-[#3CEFFF]">企業情報</div>
               <div className="pl-4 space-y-2">
@@ -126,7 +129,7 @@ export default function Navigation() {
             <div className="space-y-2">
               <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
               <div className="pl-4 space-y-2">
-                <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">サイバーセキュリティゴールキーパー</Link>
+                <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">セキュリティゴールキーパー</Link>
                 <Link to="/knowledge/blog" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ブログ</Link>
               </div>
             </div>
@@ -134,26 +137,20 @@ export default function Navigation() {
             <div className="space-y-2">
               <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
               <div className="pl-4 space-y-2">
-                <a
-                  href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#3CEFFF] hover:text-[#89FF94]"
-                >
-                  資料請求
-                </a>
-                <a
-                  href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-[#3CEFFF] hover:text-[#89FF94]"
-                >
-                  無料相談
-                </a>
+                <a href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">資料請求</a>
+                <a href="https://meetings.hubspot.com/cubic-innov8/free-consultation" target="_blank" rel="noopener noreferrer" className="block text-[#3CEFFF] hover:text-[#89FF94]">無料相談</a>
               </div>
             </div>
-</motion.div>
+          </div>
+        </motion.div>
       </div>
     </nav>
   )
 }
+"""
+
+# Save to file
+output_file = Path("/mnt/data/Navigation.tsx")
+output_file.write_text(full_code.strip(), encoding="utf-8")
+
+output_file
