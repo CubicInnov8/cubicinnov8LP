@@ -85,7 +85,7 @@ export default function PartnersPage() {
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
                 <img
-                  src="https://www.cnet-ms.com/company/images/logo.png"
+                  src="/logo.png"
                   alt="CNET Media Service"
                   className="w-full"
                 />
