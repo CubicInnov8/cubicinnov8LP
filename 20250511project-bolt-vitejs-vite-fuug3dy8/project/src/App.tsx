@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
 import ProductsPage from './pages/solutions/products'
@@ -8,21 +9,17 @@ import BCDRPage from './pages/business/bcdr'
 import HelpdeskPage from './pages/business/helpdesk'
 import CubicInnov8AIPage from './pages/business/cubicinnov8-ai'
 import PenetrationPage from './pages/business/penetration'
+import TrainingPage from './pages/business/training'
 import BlogPage from './pages/knowledge/blog'
 import GoalkeeperPage from './pages/knowledge/cybersecurity-goalkeeper'
-import TrainingPage from './pages/business/training'
 import NewsPage from './pages/company/news'
 import CareersPage from './pages/company/careers'
 import AboutPage from './pages/company/about'
 import PartnersPage from './pages/company/partners'
-// App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ScrollToTop from './components/ScrollToTop'
-import Navigation from './components/Navigation'
 
 function App() {
   return (
-     <Router>
+    <Router>
       <ScrollToTop />
       <Navigation />
       <Routes>
@@ -42,7 +39,7 @@ function App() {
         <Route path="/company/about" element={<AboutPage />} />
         <Route path="/company/partners" element={<PartnersPage />} />
       </Routes>
-    </>
+    </Router>
   )
 }
 
