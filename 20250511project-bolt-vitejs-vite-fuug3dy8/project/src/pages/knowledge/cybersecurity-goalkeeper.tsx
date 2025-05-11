@@ -76,13 +76,7 @@ export default function GoalkeeperPage() {
               className="w-full rounded-lg shadow-lg"
             />
           </div>
-          <div className="mb-8">
-            <img
-              src="/080125_CUBIC_character_profile.png"
-              alt="サイバーセキュリティゴールキーパーキャラクター"
-              className="w-48 h-48 mx-auto rounded-full border-4 border-[#3CEFFF]"
-            />
-          </div>
+         
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#3CEFFF] to-[#89FF94]">
             サイバーセキュリティゴールキーパー
           </h1>
@@ -143,6 +137,13 @@ export default function GoalkeeperPage() {
       {/* Social Links */}
       <section className="container mx-auto px-4 py-12 bg-[#001853]/30">
         <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">フォローはこちら</h2>
+         <div className="mb-8">
+            <img
+              src="/080125_CUBIC_character_profile.png"
+              alt="サイバーセキュリティゴールキーパーキャラクター"
+              className="w-48 h-48 mx-auto rounded-full border-4 border-[#3CEFFF]"
+            />
+          </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
           {socialLinks.map((social, index) => (
             <motion.a
