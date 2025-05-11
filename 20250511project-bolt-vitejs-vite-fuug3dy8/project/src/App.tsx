@@ -25,7 +25,7 @@ function App() {
   return (
     // ← ErrorBoundary を全体の一番外に
     <ErrorBoundary>
-      <Router basename="/">
+      <Router>
         <ScrollToTop />
         <Navigation />
         <Routes>
