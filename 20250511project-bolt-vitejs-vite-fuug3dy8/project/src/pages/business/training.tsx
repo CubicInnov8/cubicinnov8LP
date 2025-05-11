@@ -24,7 +24,7 @@ export default function TrainingPage() {
 
       <div className="mb-8">
             <img
-              src="/080125_CUBIC_youtube_chanel_art.png"
+              src="/Proton-featured-image - Copy.jpg"
               alt="ハッカーはあなたのデータとお金を狙っています"
               className="w-full rounded-lg shadow-lg"
             />
