@@ -15,10 +15,15 @@ import NewsPage from './pages/company/news'
 import CareersPage from './pages/company/careers'
 import AboutPage from './pages/company/about'
 import PartnersPage from './pages/company/partners'
+// App.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+import Navigation from './components/Navigation'
 
 function App() {
   return (
-    <>
+     <Router>
+      <ScrollToTop />
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -40,23 +45,5 @@ function App() {
     </>
   )
 }
-// App.tsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ScrollToTop from './components/ScrollToTop'
-import Navigation from './components/Navigation'
-// 他のインポート...
-
-function App() {
-  return (
-    <Router>
-      <ScrollToTop />
-      <Navigation />
-      <Routes>
-        {/* ルーティングをここに書く */}
-      </Routes>
-    </Router>
-  )
-}
-
 
 export default App
