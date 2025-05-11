@@ -76,7 +76,7 @@ const products: Product[] = [
     shortDescription: '中小企業向けネットワークファイアウォール＆脅威対策',
     fullDescription: 'ヤマハのUTX100は、中小企業向けに最適化されたUTM（Unified Threat Management）ソリューションです。ファイアウォール、アンチウイルス、IPS（侵入防止システム）、URLフィルタリングなどの機能を統合し、外部からの脅威を多層的に防御します。ヤマハルーターとの連携により、ネットワークの一元管理が可能です。',
     icon: <FaNetworkWired className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://network.yamaha.com/favicon.ico',
+    imageUrl: '/Yamaha.jpg',
     features: [
       'ファイアウォール保護',
       'URLフィルタリング',
