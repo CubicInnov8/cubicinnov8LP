@@ -19,7 +19,7 @@ import PartnersPage from './pages/company/partners'
 
 function App() {
   return (
-    <Router>
+      <Router basename="/">
       <ScrollToTop /> {/* ← これを JSX に追加しないと TypeScript に怒られる */}
       <Navigation />
       <Routes>
