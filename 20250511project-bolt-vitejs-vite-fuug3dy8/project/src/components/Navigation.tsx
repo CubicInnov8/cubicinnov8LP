@@ -109,40 +109,45 @@ export default function Navigation() {
             )}
           </div>
 
-          <div className="font-semibold text-[#3CEFFF]">企業情報</div>
-          <div className="pl-4 space-y-2">
-            <Link to="/company/about" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">会社概要</Link>
-            <Link to="/company/partners" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">パートナー企業</Link>
-            <Link to="/company/careers" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">採用情報</Link>
-            <Link to="/company/news" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ニュース＆トピックス</Link>
-          </div>
+<div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">企業情報</div>
+              <div className="pl-4 space-y-2">
+                <Link to="/company/about" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">会社概要</Link>
+                <Link to="/company/partners" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">パートナー企業</Link>
+                <Link to="/company/careers" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">採用情報</Link>
+                <Link to="/company/news" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ニュース＆トピックス</Link>
+              </div>
+            </div>
 
-          <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
-          <div className="pl-4 space-y-2">
-            <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">セキュリティゴールキーパー</Link>
-            <Link to="/knowledge/blog" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ブログ</Link>
-          </div>
+            <div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
+              <div className="pl-4 space-y-2">
+                <Link to="/knowledge/cybersecurity-goalkeeper" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">サイバーセキュリティゴールキーパー</Link>
+                <Link to="/knowledge/blog" className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ブログ</Link>
+              </div>
+            </div>
 
-          <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
-          <div className="pl-4 space-y-2">
-            <a
-              href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-[#3CEFFF] hover:text-[#89FF94]"
-            >
-              資料請求
-            </a>
-            <a
-              href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-[#3CEFFF] hover:text-[#89FF94]"
-            >
-              無料相談
-            </a>
-          </div>
-        </div>
+            <div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
+              <div className="pl-4 space-y-2">
+                <a
+                  href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+                >
+                  資料請求
+                </a>
+                <a
+                  href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors"
+                >
+                  無料相談
+                </a>
+              </div>
+            </div>
       </motion.div>
     </nav>
   )
