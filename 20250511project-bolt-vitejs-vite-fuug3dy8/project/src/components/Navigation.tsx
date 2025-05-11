@@ -5,11 +5,17 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showCaseStudies, setShowCaseStudies] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
     setIsMenuOpen(false)
+    setShowCaseStudies(false)
   }, [location])
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto'
+  }, [isMenuOpen])
 
   const caseStudies = [
     { title: "金融", description: "VC、投資ファンドなどにおける弊社ソリューションをご紹介します。" },
@@ -30,29 +36,11 @@ export default function Navigation() {
           <Link to="/" className="h-8">
             <img src="/logo.png" alt="Cubic Innov8" className="h-full" />
           </Link>
-
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-[#3CEFFF]"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-[#3CEFFF]">
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
-
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
-
-            <div className="relative group">
-              <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">事業内容</span>
-              <div className="absolute left-0 mt-2 w-96 bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
-                <Link to="/business/msit" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">MSIT（マネージドセキュリティ＆IT）サービスとSOC運用</Link>
-                <Link to="/business/penetration" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">脆弱性診断・ペネトレーションテスト</Link>
-                <Link to="/business/bcdr" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">BCDR（バックアップ＆災害復旧）</Link>
-                <Link to="/business/helpdesk" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ITヘルプデスク</Link>
-                <Link to="/business/cloud" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">クラウド、DXツール構築、導入</Link>
-                <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ヒューマンエラー対策</Link>
-              </div>
-            </div>
-
             <div className="relative group">
               <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">導入事例</span>
               <div className="absolute left-0 mt-2 w-[600px] bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
@@ -68,12 +56,12 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* モバイルメニュー */}
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
+          className="md:hidden overflow-hidden max-h-[90vh] overflow-y-auto"
         >
           <div className="py-4 space-y-4">
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
@@ -91,16 +79,23 @@ export default function Navigation() {
             </div>
 
             <div className="space-y-2">
-              <div className="font-semibold text-[#3CEFFF]">導入事例</div>
-              <div className="pl-4 space-y-2">
-                {caseStudies.map((study, index) => (
-                  <div key={index}>
-                    <h3 className="text-[#3CEFFF] font-medium">{study.title}</h3>
-                    <p className="text-gray-300 text-sm">{study.description}</p>
-                    <span className="text-[#FF6B6B] text-sm">Coming soon</span>
-                  </div>
-                ))}
-              </div>
+              <button
+                onClick={() => setShowCaseStudies(!showCaseStudies)}
+                className="font-semibold text-[#3CEFFF] w-full text-left"
+              >
+                導入事例 {showCaseStudies ? '▲' : '▼'}
+              </button>
+              {showCaseStudies && (
+                <div className="pl-4 space-y-2">
+                  {caseStudies.map((study, index) => (
+                    <div key={index}>
+                      <h3 className="text-[#3CEFFF] font-medium">{study.title}</h3>
+                      <p className="text-gray-300 text-sm">{study.description}</p>
+                      <span className="text-[#FF6B6B] text-sm">Coming soon</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </motion.div>
