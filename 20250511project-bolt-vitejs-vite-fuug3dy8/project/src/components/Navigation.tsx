@@ -6,6 +6,20 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  import { useState, useEffect } from 'react'  // ← useEffectを追加！
+import { Link, useLocation } from 'react-router-dom' // ← useLocationも追加！
+
+export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation() // ← ここ追加！
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [location]) // ← ページ遷移時にメニューを閉じる
+
+  // 以下はそのまま（メニューのJSXなど）
+
+
   const caseStudies = [
     {
       title: "金融",
