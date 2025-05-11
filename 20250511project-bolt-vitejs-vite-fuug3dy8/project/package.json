@@ -2,7 +2,7 @@
   "name": "cubic-innov8",
   "private": true,
   "version": "0.0.0",
-  "homepage": "/project/"
+  "homepage": "/project/",
   "type": "module",
   "scripts": {
     "dev": "vite",
