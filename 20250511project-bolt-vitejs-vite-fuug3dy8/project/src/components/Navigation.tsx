@@ -41,14 +41,29 @@ export default function Navigation() {
           </button>
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
+
+            <div className="relative group">
+              <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">事業内容</span>
+              <div className="absolute left-0 mt-2 w-96 bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                <Link to="/business/msit" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">MSIT（マネージドセキュリティ＆IT）サービスとSOC運用</Link>
+                <Link to="/business/penetration" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">脆弱性診断・ペネトレーションテスト</Link>
+                <Link to="/business/bcdr" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">BCDR（バックアップ＆災害復旧）</Link>
+                <Link to="/business/helpdesk" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ITヘルプデスク</Link>
+                <Link to="/business/cloud" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">クラウド、DXツール構築、導入</Link>
+                <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ヒューマンエラー対策</Link>
+              </div>
+            </div>
+
             <div className="relative group">
               <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">導入事例</span>
-              <div className="absolute left-0 mt-2 w-[600px] bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+              <div className="absolute left-[-200px] mt-2 w-[600px] bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
                 {caseStudies.map((study, index) => (
                   <div key={index} className="px-6 py-3 hover:bg-[#001853]/50">
-                    <h3 className="text-[#3CEFFF] font-medium text-lg">{study.title}</h3>
-                    <p className="text-gray-300 text-sm mt-1">{study.description}</p>
-                    <span className="text-[#FF6B6B] text-sm mt-1">Coming soon</span>
+                    <div className="flex flex-col">
+                      <h3 className="text-[#3CEFFF] font-medium text-lg">{study.title}</h3>
+                      <p className="text-gray-300 text-sm mt-1">{study.description}</p>
+                      <span className="text-[#FF6B6B] text-sm mt-1">Coming soon</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -56,7 +71,6 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* モバイルメニュー */}
         <motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
@@ -64,7 +78,7 @@ export default function Navigation() {
           className="md:hidden overflow-hidden max-h-[90vh] overflow-y-auto"
         >
           <div className="py-4 space-y-4">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ホーム</Link>
 
             <div className="space-y-2">
               <div className="font-semibold text-[#3CEFFF]">事業内容</div>
@@ -98,7 +112,47 @@ export default function Navigation() {
               )}
             </div>
           </div>
-        </motion.div>
+        
+            <div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">企業情報</div>
+              <div className="pl-4 space-y-2">
+                <Link to="/company/about" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">会社概要</Link>
+                <Link to="/company/partners" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">パートナー企業</Link>
+                <Link to="/company/careers" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">採用情報</Link>
+                <Link to="/company/news" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ニュース＆トピックス</Link>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">ナレッジ</div>
+              <div className="pl-4 space-y-2">
+                <Link to="/knowledge/cybersecurity-goalkeeper" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">サイバーセキュリティゴールキーパー</Link>
+                <Link to="/knowledge/blog" onClick={() => setIsMenuOpen(false)} className="block text-[#3CEFFF] hover:text-[#89FF94]">ブログ</Link>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <div className="font-semibold text-[#3CEFFF]">お問い合わせ</div>
+              <div className="pl-4 space-y-2">
+                <a
+                  href="https://share.hsforms.com/2xhMDTeU9S16_4MBJ-O5A4gsodm3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-[#3CEFFF] hover:text-[#89FF94]"
+                >
+                  資料請求
+                </a>
+                <a
+                  href="https://meetings.hubspot.com/cubic-innov8/free-consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-[#3CEFFF] hover:text-[#89FF94]"
+                >
+                  無料相談
+                </a>
+              </div>
+            </div>
+</motion.div>
       </div>
     </nav>
   )
