@@ -34,7 +34,7 @@ const products: Product[] = [
     shortDescription: '機械学習とビッグデータ解析により、既知・未知の脅威をリアルタイムで検知・防御',
     fullDescription: 'Microsoft Defender for Endpointは、機械学習とビッグデータ解析を活用し、既知・未知の脅威をリアルタイムで検出・防御するエンドポイントセキュリティソリューションです。EDR（Endpoint Detection and Response）機能により、攻撃の兆候を早期に察知し、自動的に対処します。また、Microsoft Intuneとの統合により、デバイスのリスクベースの条件付きアクセス制御が可能です。SOCとの連携により、インシデントの迅速な対応と詳細な分析が実現します。',
     icon: <FaShieldAlt className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://www.microsoft.com/favicon.ico',
+    imageUrl: '/logo-microsoft-defender.png',
     features: [
       'AIベースの脅威検知',
       'エンドポイント保護',
