@@ -65,7 +65,7 @@ export default function Home() {
             <img
               src="/080125_CUBIC_youtube_chanel_art.png"
               alt="ハッカーはあなたのデータとお金を狙っています"
-              className="w-3/4 md:w-1/2 mx-auto rounded-lg shadow-lg"
+              className="w-3/4 md:w-3/4 mx-auto rounded-lg shadow-lg"
             />
           </div>
           
