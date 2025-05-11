@@ -22,13 +22,13 @@ export default function TrainingPage() {
         </motion.div>
       </section>
 
-      <div className="mb-8">
-            <img
-              src="/Proton-featured-image - Copy.jpg"
-              alt="ハッカーはあなたのデータとお金を狙っています"
-              className="w-full rounded-lg shadow-lg"
-            />
-          </div>
+    <div className="mb-8">
+  <img
+    src="/Proton-featured-image - Copy.jpg"
+    alt="ハッカーはあなたのデータとお金を狙っています"
+    className="w-full max-h-[400px] object-cover rounded-lg shadow-lg"
+  />
+</div>
 
       {/* Why Section */}
       <section className="container mx-auto px-4 py-12 bg-[#001853]/30">
