@@ -18,10 +18,20 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: '2rem', background: '#900', color: '#fff' }}>
-          <h1>予期せぬエラーが発生しました</h1>
-          <pre>{this.state.error?.message}</pre>
-          <pre>{this.state.error?.stack}</pre>
+        <div style={{
+          padding: '2rem',
+          background: '#900',
+          color: '#fff',
+          whiteSpace: 'pre-wrap',
+          fontFamily: 'monospace'
+        }}>
+          <h1>アプリにエラーが発生しました</h1>
+          {this.state.error && (
+            <>
+              <div><strong>Message:</strong> {this.state.error.message}</div>
+              <div><strong>Stack:</strong>{this.state.error.stack}</div>
+            </>
+          )}
         </div>
       )
     }
