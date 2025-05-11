@@ -10,9 +10,9 @@ import BCDRPage from './pages/business/bcdr'
 import HelpdeskPage from './pages/business/helpdesk'
 import CubicInnov8AIPage from './pages/business/cubicinnov8-ai'
 import PenetrationPage from './pages/business/penetration'
-import TrainingPage from './pages/business/training'
 import BlogPage from './pages/knowledge/blog'
 import GoalkeeperPage from './pages/knowledge/cybersecurity-goalkeeper'
+import TrainingPage from './pages/business/training'
 import NewsPage from './pages/company/news'
 import CareersPage from './pages/company/careers'
 import AboutPage from './pages/company/about'
@@ -45,4 +45,3 @@ function App() {
 }
 
 export default App
-
