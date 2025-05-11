@@ -48,7 +48,7 @@ const products: Product[] = [
     shortDescription: 'リアルタイム検知・脅威ブロック・自動隔離・バックアップ復元',
     fullDescription: 'DattoのAV（アンチウイルス）、EDR（高度な脅威検出と自動隔離）、Backup（バックアップと自動復元）ソリューションは、エンドポイントのリアルタイム保護と迅速な復旧を提供します。リアルタイム検知により、マルウェアやランサムウェアの侵入を即座に検出し、自動的に隔離・ブロックします。また、定期的なバックアップにより、万が一のデータ損失時にも迅速な復旧が可能です。SOCとの連携により、脅威の監視と対応が強化されます。',
     icon: <FaLock className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://www.datto.com/favicon.ico',
+    imageUrl: '/0000573_datto_550.png',
     features: [
       'マルウェア対策',
       'ランサムウェア保護',
