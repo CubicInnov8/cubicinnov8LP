@@ -20,7 +20,7 @@ const products: Product[] = [
     shortDescription: 'IT資産の監視・更新・パッチ管理・リモート対応のRMMツール',
     fullDescription: 'Kaseya VSAは、IT資産の監視、パッチ管理、リモート対応などを一元的に行えるRMM（Remote Monitoring and Management）ツールです。セキュリティパッチの迅速な適用により攻撃対象領域を最小化し、エンドポイントのセキュリティを維持します。ダッシュボードでは、パッチ、アンチウイルス、バックアップの状態を可視化でき、SOCチームによる監視と連携が容易です。また、リモート操作機能により、トラブル発生時の迅速な対応が可能です。',
     icon: <FaDesktop className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'kaseya.png',
+    imageUrl: '/kaseya.png',
     features: [
       'リアルタイムの資産監視',
       'パッチ管理の自動化',
