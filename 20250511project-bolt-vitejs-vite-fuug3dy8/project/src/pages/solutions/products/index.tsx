@@ -118,7 +118,7 @@ const products: Product[] = [
     shortDescription: 'Gmail, Google Drive, Meet, 管理コンソールによる統合クラウド業務環境',
     fullDescription: 'Google Workspaceは、Gmail、Google Drive、Meet、管理コンソールなどを統合したクラウドベースの業務環境です。リアルタイムの共同編集やビデオ会議、ファイル共有などにより、柔軟な働き方を支援します。管理コンソールを通じて、ユーザーやデバイスの管理、セキュリティポリシーの適用が可能です。また、AIによるスマート機能が業務の効率化を促進します。',
     icon: <FaGoogle className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://workspace.google.com/favicon.ico',
+    imageUrl: '/business_googleworkspace_intro.png',
     features: [
       'クラウドストレージ',
       'ビデオ会議',
