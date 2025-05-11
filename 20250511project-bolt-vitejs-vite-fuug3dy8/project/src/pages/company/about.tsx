@@ -65,13 +65,9 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">代表者プロフィール</h2>
           
           <div className="bg-[#000B2E]/50 rounded-lg p-8">
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              <div className="md:w-1/3">
-                <div className="aspect-square bg-[#3CEFFF]/10 rounded-lg flex items-center justify-center">
-                  <FaBriefcase className="w-20 h-20 text-[#3CEFFF]" />
-                </div>
-              </div>
-              <div className="md:w-2/3">
+            <div className="flex flex-col gap-8 items-start">
+              
+              <div className="w-full">
                 <h3 className="text-2xl font-bold mb-4">塩田 祐亮 – 代表取締役</h3>
                 
                 <div className="space-y-6">
