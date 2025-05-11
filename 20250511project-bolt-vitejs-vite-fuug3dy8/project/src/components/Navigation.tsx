@@ -76,7 +76,7 @@ export default function Navigation() {
                   ITヘルプデスク
                 </Link>
                 <Link to="/business/cloud" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
-                  クラウド、DXツール構築、導入
+                  クラウド、DXツール構築、AI導入
                 </Link>
                 <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">
                   ヒューマンエラー対策
@@ -218,7 +218,7 @@ export default function Navigation() {
               onClick={() => setIsMenuOpen(false)}
               className="block text-[#3CEFFF] hover:text-[#89FF94]"
             >
-              クラウド導入
+              AI&クラウド導入
             </Link>
             <Link
               to="/business/training"
