@@ -90,7 +90,7 @@ const products: Product[] = [
     shortDescription: '次世代ファイアウォールによる高度な脅威対策',
     fullDescription: 'Palo Alto Networksの次世代ファイアウォールは、高度な脅威検知と防御機能を提供します。アプリケーションの可視化と制御、脅威の防御、URLフィルタリング、暗号化トラフィックの検査など、包括的なセキュリティ機能を統合しています。クラウドベースの脅威インテリジェンスにより、最新の脅威に対する保護を実現します。',
     icon: <FaNetworkWired className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/brand/primary-company-logo-reverse-rgb.png',
+    imageUrl: '/Palo.png',
     features: [
       '次世代ファイアウォール',
       'アプリケーション制御',
