@@ -62,7 +62,7 @@ const products: Product[] = [
     shortDescription: 'USB制御・稼働ログ収集・勤怠把握などIT統制',
     fullDescription: 'AssetViewは、USB制御、稼働ログ収集、勤怠把握などを通じて、IT資産の可視化と内部統制を強化するソリューションです。USBデバイスの使用制限やログの収集により、情報漏洩リスクを低減します。また、勤怠情報の把握により、労務管理の効率化が図れます。SOCとの連携により、内部からの脅威に対する監視と対応が可能です。',
     icon: <FaServer className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://shrevya.com/wp-content/uploads/2023/12/assetview-logo.png',
+    imageUrl: '/asset_view_00.png',
     features: [
       'デバイス制御',
       'ログ管理',
