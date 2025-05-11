@@ -22,6 +22,14 @@ export default function TrainingPage() {
         </motion.div>
       </section>
 
+      <div className="mb-8">
+            <img
+              src="/080125_CUBIC_youtube_chanel_art.png"
+              alt="ハッカーはあなたのデータとお金を狙っています"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
+
       {/* Why Section */}
       <section className="container mx-auto px-4 py-12 bg-[#001853]/30">
         <div className="max-w-4xl mx-auto">
