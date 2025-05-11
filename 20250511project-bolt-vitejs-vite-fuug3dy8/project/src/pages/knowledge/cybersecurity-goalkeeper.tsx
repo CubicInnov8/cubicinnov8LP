@@ -71,7 +71,7 @@ export default function GoalkeeperPage() {
         >
           <div className="mb-8">
             <img
-              src="/goalkeeper-hero.jpg"
+              src="/080125_CUBIC_youtube_chanel_art.png"
               alt="ハッカーはあなたのデータとお金を狙っています"
               className="w-full rounded-lg shadow-lg"
             />
