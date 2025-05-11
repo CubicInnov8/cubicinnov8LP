@@ -61,6 +61,14 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
+          <div className="mb-8">
+            <img
+              src="/080125_CUBIC_youtube_chanel_art.png"
+              alt="ハッカーはあなたのデータとお金を狙っています"
+              className="w-full rounded-lg shadow-lg"
+            />
+          </div>
+          
           <h1 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#3CEFFF] to-[#89FF94]">
             何も起きなかったことが効果の証
           </h1>
