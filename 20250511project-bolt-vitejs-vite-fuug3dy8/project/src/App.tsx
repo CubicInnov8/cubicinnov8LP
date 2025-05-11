@@ -20,7 +20,7 @@ import PartnersPage from './pages/company/partners'
 function App() {
   return (
     <Router>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
