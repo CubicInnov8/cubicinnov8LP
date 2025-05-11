@@ -78,7 +78,7 @@ export default function GoalkeeperPage() {
           </div>
           <div className="mb-8">
             <img
-              src="/goalkeeper-character.jpg"
+              src="/080125_CUBIC_character_profile.png"
               alt="サイバーセキュリティゴールキーパーキャラクター"
               className="w-48 h-48 mx-auto rounded-full border-4 border-[#3CEFFF]"
             />
