@@ -104,7 +104,7 @@ const products: Product[] = [
     shortDescription: 'Outlook, Teams, OneDrive, Intune などを統合した業務・セキュリティ基盤',
     fullDescription: 'Microsoft 365は、Outlook、Teams、OneDrive、Intuneなどを統合した業務・セキュリティ基盤です。メール、チャット、ファイル共有、デバイス管理を一元化し、業務の効率化を実現します。Intuneとの連携により、デバイスのセキュリティポリシーを一括で適用・管理できます。また、Microsoft Defender for Endpointとの統合により、エンドポイントのセキュリティが強化されます。',
     icon: <FaCloud className="w-12 h-12 text-[#3CEFFF]" />,
-    imageUrl: 'https://www.microsoft.com/favicon.ico',
+    imageUrl: '/08a45d57f28e47229fd636b6dfeda900.png',
     features: [
       'メール・チャット',
       'ファイル共有',
