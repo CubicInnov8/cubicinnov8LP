@@ -32,9 +32,9 @@ export default function Navigation() {
   return (
     <nav className="bg-[#000B2E]/80 backdrop-blur-sm fixed w-full z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <Link to="/" className="h-8">
-            <img src="/CUBIC_INNOV8_symbol+logo_horizontal_white.png" alt="Cubic Innov8" className="h-full" />
+            <img src="/CUBIC_INNOV8_symbol+logo_horizontal_white.png" alt="Cubic Innov8" className="h-10 md:h-12" />
           </Link>
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-[#3CEFFF]">
             {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
