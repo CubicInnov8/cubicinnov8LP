@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
-
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import ProductsPage from './pages/solutions/products'
 import SolutionsPage from './pages/solutions/solutions'
@@ -20,7 +20,7 @@ import PartnersPage from './pages/company/partners'
 function App() {
   return (
     <Router>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop /> {/* ← これを JSX に追加しないと TypeScript に怒られる */}
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,3 +44,4 @@ function App() {
 }
 
 export default App
+
