@@ -50,10 +50,6 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ホーム</Link>
 
-            <Link to="/solutions/products" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">
-              製品
-            </Link>
-
             <div className="relative group">
               <span className="text-[#3CEFFF] hover:text-[#89FF94] cursor-default">事業内容</span>
               <div className="absolute left-0 mt-2 w-96 bg-[#000B2E]/95 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
@@ -65,7 +61,7 @@ export default function Navigation() {
                 <Link to="/business/training" className="block px-4 py-2 text-[#3CEFFF] hover:bg-[#001853]/50">ヒューマンエラー対策</Link>
               </div>
             </div>
-
+<Link to="/solutions/products" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">製品</Link>
             <Link to="/company/about" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">企業情報</Link>
             <Link to="/knowledge/blog" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">ナレッジ</Link>
             <Link to="/contact" className="text-[#3CEFFF] hover:text-[#89FF94] transition-colors">お問い合わせ</Link>
