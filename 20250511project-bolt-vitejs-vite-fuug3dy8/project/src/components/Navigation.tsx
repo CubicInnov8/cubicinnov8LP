@@ -1,7 +1,6 @@
 # Full Navigation.tsx source code with all fixes applied, ready for direct copy-paste
 full_code = """
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+
 import { motion } from 'framer-motion'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
