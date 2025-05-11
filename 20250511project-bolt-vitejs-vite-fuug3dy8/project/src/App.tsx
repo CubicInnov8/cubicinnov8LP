@@ -25,7 +25,6 @@ function App() {
   return (
     // ← ErrorBoundary を全体の一番外に
     <ErrorBoundary>
-      <Router>
         <ScrollToTop />
         <Navigation />
         <Routes>
@@ -45,7 +44,6 @@ function App() {
           <Route path="/company/about" element={<AboutPage />} />
           <Route path="/company/partners" element={<PartnersPage />} />
        </Routes>
-      </Router>
     </ErrorBoundary>
   )
 }
