@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaServer, FaCloud, FaCheckCircle, FaDatabase, FaShieldAlt, FaLaptop, FaNetworkWired } from 'react-icons/fa'
+import { FaHeadset, FaUsers, FaGlobe, FaCheckCircle, FaClock, FaChartLine } from 'react-icons/fa'
 
 interface Feature {
   icon: React.ReactNode
@@ -7,55 +7,26 @@ interface Feature {
   description: string
 }
 
-interface Product {
-  name: string
-  description: string
-  features: string[]
-}
-
 const features: Feature[] = [
   {
-    icon: <FaServer className="w-8 h-8 text-[#3CEFFF]" />,
-    title: "リアルタイムの自動バックアップ",
-    description: "PC・サーバ両対応のリアルタイムバックアップで、データを常に保護します。"
+    icon: <FaHeadset className="w-8 h-8 text-[#3CEFFF]" />,
+    title: "24時間365日対応",
+    description: "日本語・英語のバイリンガルサポートで、いつでも安心"
   },
   {
-    icon: <FaCloud className="w-8 h-8 text-[#3CEFFF]" />,
-    title: "ローカル＋クラウドの二重保存",
-    description: "Datto Cloudへの自動転送で、オフサイトバックアップを実現します。"
+    icon: <FaUsers className="w-8 h-8 text-[#3CEFFF]" />,
+    title: "専任チーム制",
+    description: "お客様専用のチームが一貫してサポート"
   },
   {
-    icon: <FaLaptop className="w-8 h-8 text-[#3CEFFF]" />,
-    title: "仮想マシンによる即時復旧",
-    description: "仮想環境で即座に業務を再開できる「すぐ使える」リカバリ環境を提供。"
+    icon: <FaGlobe className="w-8 h-8 text-[#3CEFFF]" />,
+    title: "マルチプラットフォーム対応",
+    description: "Windows, Mac, iOS, Androidなど、あらゆる環境をサポート"
   },
   {
-    icon: <FaShieldAlt className="w-8 h-8 text-[#3CEFFF]" />,
-    title: "物理障害・ウイルス被害からの復旧",
-    description: "ハードウェア故障やランサムウェア被害からの迅速な復旧を支援します。"
-  }
-]
-
-const dattoProducts: Product[] = [
-  {
-    name: "SIRIS",
-    description: "中～大規模向けBCDR基盤",
-    features: ["オンプレミス＆クラウドバックアップ", "仮想マシンによる即時復旧", "ランサムウェア検知"]
-  },
-  {
-    name: "ALTO",
-    description: "小規模企業向け簡易BCDRモデル",
-    features: ["クラウドファースト設計", "シンプルな運用", "コスト効率の良い保護"]
-  },
-  {
-    name: "Endpoint Backup",
-    description: "PC単位の保護",
-    features: ["エンドポイントの直接保護", "シームレスなバックアップ", "柔軟な復元オプション"]
-  },
-  {
-    name: "Azure Backup",
-    description: "クラウド環境保護",
-    features: ["Azure環境の保護", "クラウドネイティブ", "スケーラブルな運用"]
+    icon: <FaClock className="w-8 h-8 text-[#3CEFFF]" />,
+    title: "迅速な初期対応",
+    description: "15分以内の一次回答で、業務の中断を最小限に"
   }
 ]
 
@@ -71,24 +42,21 @@ export default function HelpdeskPage() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#3CEFFF] to-[#89FF94]">
-            DattoのBCDRソリューション — 「止まらない会社」をつくる仕組
+            ITヘルプデスク
           </h1>
           <p className="text-xl text-[#3CEFFF] mb-8">
-            もしも業務サーバー、PCが壊れたら？
+            社員の「困った」をすぐに解決
           </p>
           <p className="text-lg text-gray-300 mb-8">
-            突然のサイバー攻撃、PCの故障、災害によって業務データが失われると、会社の信用や収益に直結します。<br />
-            だからこそ、今求められるのは「ただのバックアップではない」即復旧できる 事業継続・災害復旧（BCDR）ソリューションです。
+            PCトラブル、アプリケーションの設定、セキュリティ対策など、<br />
+            日々のIT関連の「困った」を専任チームが解決します。
           </p>
         </motion.div>
       </section>
 
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-12 bg-[#001853]/30">
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">Datto SIRISとは？</h2>
-        <p className="text-xl text-center text-gray-300 mb-12">
-          Datto SIRIS は、バックアップと災害復旧（DR）を統合した、中小企業・MSP向けのオールインワンBCDRシステムです。
-        </p>
+        <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">サービスの特徴</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -106,80 +74,151 @@ export default function HelpdeskPage() {
         </div>
       </section>
 
-      {/* Backup Flow Diagram */}
+      {/* Support Flow */}
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">
-            データ保護の基本「3-2-1ルール」とは？
+            サポートの流れ
           </h2>
           <div className="bg-[#001853]/30 p-8 rounded-lg mb-8">
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <FaCheckCircle className="text-[#3CEFFF] w-6 h-6 flex-shrink-0" />
-                <span>3： データを3つ保持（元データ＋2コピー）</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaCheckCircle className="text-[#3CEFFF] w-6 h-6 flex-shrink-0" />
-                <span>2： 2種類の異なるメディアに保存（例：HDDとクラウド）</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaCheckCircle className="text-[#3CEFFF] w-6 h-6 flex-shrink-0" />
-                <span>1： 少なくとも1つはオフサイト（外部環境）に保管</span>
-              </li>
-            </ul>
-            <p className="mt-6 text-gray-300">
-              Datto SIRISはこの3-2-1ルールを自動で実現。<br />
-              社内外にデータを分散保管し、仮想化で<strong className="text-[#3CEFFF]">「すぐに戻れる」</strong>状態をキープします。
-            </p>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-[#3CEFFF]/20 p-3 rounded-full">
+                  <span className="text-[#3CEFFF] font-bold">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">問い合わせ受付</h3>
+                  <p className="text-gray-300">電話・メール・チャットで問い合わせを受付</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-[#3CEFFF]/20 p-3 rounded-full">
+                  <span className="text-[#3CEFFF] font-bold">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">初期切り分け</h3>
+                  <p className="text-gray-300">15分以内に一次回答・対応方針をご案内</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-[#3CEFFF]/20 p-3 rounded-full">
+                  <span className="text-[#3CEFFF] font-bold">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">リモート対応</h3>
+                  <p className="text-gray-300">必要に応じてリモートで直接サポート</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="bg-[#3CEFFF]/20 p-3 rounded-full">
+                  <span className="text-[#3CEFFF] font-bold">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">解決確認</h3>
+                  <p className="text-gray-300">問題解決の確認と再発防止のアドバイス</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Datto Products */}
+      {/* Support Coverage */}
       <section className="container mx-auto px-4 py-12 bg-[#001853]/30">
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">関連プロダクト（Datto社）</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {dattoProducts.map((product, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20"
-            >
-              <h3 className="text-xl font-bold mb-2 text-[#3CEFFF]">{product.name}</h3>
-              <p className="text-gray-300 mb-4">{product.description}</p>
-              <ul className="space-y-2">
-                {product.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-2 text-gray-400">
-                    <span className="w-1.5 h-1.5 bg-[#3CEFFF] rounded-full"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+        <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">サポート対応範囲</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
+            <h3 className="text-xl font-bold mb-4 text-[#3CEFFF]">基本サポート</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>PCセットアップ</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>メール設定</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>プリンター設定</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>ネットワーク接続</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
+            <h3 className="text-xl font-bold mb-4 text-[#3CEFFF]">アプリケーション</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>Office 365</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>Google Workspace</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>Zoom/Teams</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>その他業務アプリ</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
+            <h3 className="text-xl font-bold mb-4 text-[#3CEFFF]">セキュリティ</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>ウイルス対策</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>VPN設定</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>パスワード管理</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <FaCheckCircle className="text-[#3CEFFF]" />
+                <span>セキュリティ研修</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Support Section */}
+      {/* Monthly Report */}
       <section className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#3CEFFF]">
-            Cubic Innov8では導入から運用までフルサポート
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
-              <FaServer className="w-8 h-8 text-[#3CEFFF] mx-auto mb-4" />
-              <h3 className="text-lg font-semibold">貴社環境に合わせたBCDR設計</h3>
-            </div>
-            <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
-              <FaDatabase className="w-8 h-8 text-[#3CEFFF] mx-auto mb-4" />
-              <h3 className="text-lg font-semibold">監視・復旧支援・レポート自動化</h3>
-            </div>
-            <div className="bg-[#000B2E]/50 p-6 rounded-lg border border-[#3CEFFF]/20">
-              <FaNetworkWired className="w-8 h-8 text-[#3CEFFF] mx-auto mb-4" />
-              <h3 className="text-lg font-semibold">Microsoft 365・Google Workspaceとの連携も可能</h3>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#3CEFFF]">月次レポート</h2>
+          <div className="bg-[#000B2E]/50 p-8 rounded-lg border border-[#3CEFFF]/20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <FaChartLine className="text-4xl text-[#3CEFFF] mb-4" />
+                <h3 className="text-xl font-bold mb-4">サポート実績</h3>
+                <ul className="space-y-2">
+                  <li>• 問い合わせ件数と解決率</li>
+                  <li>• 対応時間の分析</li>
+                  <li>• よくある問い合わせの傾向</li>
+                  <li>• ユーザー満足度</li>
+                </ul>
+              </div>
+              <div>
+                <FaUsers className="text-4xl text-[#3CEFFF] mb-4" />
+                <h3 className="text-xl font-bold mb-4">改善提案</h3>
+                <ul className="space-y-2">
+                  <li>• トレーニング推奨事項</li>
+                  <li>• システム改善案</li>
+                  <li>• セキュリティ対策の提案</li>
+                  <li>• コスト削減のヒント</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
