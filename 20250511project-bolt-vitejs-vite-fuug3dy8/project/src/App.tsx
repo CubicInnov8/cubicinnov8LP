@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
 import ScrollToTop from './components/ScrollToTop'
 import Navigation from './components/Navigation'
-
+import { useEffect } from 'react'
 import Home from './pages/Home'
 
 import ProductsPage from './pages/solutions/products'
@@ -22,6 +22,9 @@ import AboutPage from './pages/company/about'
 import PartnersPage from './pages/company/partners'
 
 function App() {
+   useEffect(() => {
+    document.title = '株式会社キュービックイノベート'
+  }, [])
   return (
     // ← ErrorBoundary を全体の一番外に
     <ErrorBoundary>
